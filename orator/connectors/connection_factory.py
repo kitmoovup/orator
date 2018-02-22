@@ -69,9 +69,6 @@ class ConnectionFactory(object):
         return self._merge_read_write_config(config, write_config)
 
     def _get_read_write_config(self, config, type):
-        if config.get(type, []):
-            return random.choice(config[type])
-
         return config[type]
 
     def _merge_read_write_config(self, config, merge):
